@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kol/services/Local/AppLocalizations.dart';
-
 import 'services/Local/local_cubit.dart';
 import 'services/pre_app_config.dart';
 import 'services/router.dart';
