@@ -19,6 +19,7 @@ class OtpBody extends StatelessWidget {
             AppAssets.bubble3,
             width: 300.w,
             height: 360.h,
+            fit: BoxFit.fill,
           ),
         ),
         Positioned(
@@ -28,6 +29,7 @@ class OtpBody extends StatelessWidget {
             AppAssets.bubble4,
             width: 373.w,
             height: 325.h,
+            fit: BoxFit.fill,
           ),
         ),
         Column(

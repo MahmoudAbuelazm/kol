@@ -34,17 +34,19 @@ class _PinPutBodyState extends State<PinPutBody> {
           child: Pinput(
             length: 4,
             //controller: widget.pinController,
+          
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             keyboardType: TextInputType.number,
             defaultPinTheme: PinTheme(
               height: 55.h,
               width: 55.w,
-              textStyle:  TextStyle(fontSize: 20.sp, color: Colors.black),
+              textStyle: TextStyle(fontSize: 20.sp, color: Colors.black),
               decoration: BoxDecoration(
                 color: Colors.grey[300]!,
                 borderRadius: BorderRadius.circular(10.r),
               ),
+              padding: EdgeInsets.zero,
             ),
           ),
         ),

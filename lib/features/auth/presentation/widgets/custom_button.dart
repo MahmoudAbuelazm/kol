@@ -14,26 +14,24 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white,
-          backgroundColor: ColorPalette.primary,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.r),
-          ),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        foregroundColor: Colors.white,
+        backgroundColor: ColorPalette.primary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.r),
         ),
-        onPressed: onTap,
-        child: SizedBox(
-          width: 300.w,
-          height: 60.h,
-          child: Center(
-            child: Text(
-              text,
-              style: TextStyles().montserrat400_13.copyWith(
-                    fontSize: 16.sp,
-                  ),
-            ),
+        padding: EdgeInsets.zero,
+      ),
+      onPressed: onTap,
+      child: Center(
+        child: Padding(
+          padding:  EdgeInsets.symmetric(vertical: 17.h, horizontal: 20.w),
+          child: Text(
+            text,
+            style: TextStyles().montserrat400_13.copyWith(
+                  fontSize: 16.sp,
+                ),
           ),
         ),
       ),

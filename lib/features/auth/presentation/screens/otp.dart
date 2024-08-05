@@ -6,7 +6,7 @@ class Otp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: OtpBody(),
+      body: SingleChildScrollView(child: OtpBody()),
     );
   }
 }

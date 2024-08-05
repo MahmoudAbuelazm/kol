@@ -18,8 +18,9 @@ class LoginBody extends StatelessWidget {
           right: -120.w,
           child: Image.asset(
             AppAssets.bubble5,
-            width: 300.w,
-            height: 300.h,
+            width: 250.w,
+            height: 250.h,
+            fit: BoxFit.fitHeight,
           ),
         ),
         Positioned(
@@ -29,6 +30,7 @@ class LoginBody extends StatelessWidget {
             AppAssets.bubble3,
             width: 300.w,
             height: 360.h,
+            fit: BoxFit.fill,
           ),
         ),
         Positioned(
@@ -38,10 +40,11 @@ class LoginBody extends StatelessWidget {
             AppAssets.bubble4,
             width: 373.w,
             height: 325.h,
+            fit: BoxFit.fill,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -11,7 +11,7 @@ class Start extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: Column(
         children: [
           const Spacer(

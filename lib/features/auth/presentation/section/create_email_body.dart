@@ -14,21 +14,23 @@ class CreateEmailBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 10.h,
-          right: -103.w,
+          top: 40.h,
+          right: -100.w,
           child: Image.asset(
             AppAssets.bubble1,
-            width: 300.w,
+            width: 200.w,
             height: 300.h,
+            fit: BoxFit.fill,
           ),
         ),
         Positioned(
-          top: -110.h,
+          top: -115.h,
           left: -50.w,
           child: Image.asset(
             AppAssets.bubble2,
             width: 311.w,
             height: 367.h,
+            fit: BoxFit.fill,
           ),
         ),
         Padding(

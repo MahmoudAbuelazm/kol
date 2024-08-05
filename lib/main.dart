@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           return ScreenUtilInit(
               designSize: const Size(375, 812),
+               minTextAdapt: true,
               builder: (_, child) {
                 return SafeArea(
                   child: MaterialApp.router(
