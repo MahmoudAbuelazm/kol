@@ -14,8 +14,8 @@ class LoginBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 170.h,
-          right: -120.w,
+          top: 160.h,
+          right: -110.w,
           child: Image.asset(
             AppAssets.bubble5,
             width: 250.w,
