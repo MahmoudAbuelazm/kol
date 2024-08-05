@@ -20,18 +20,18 @@ class CustomButton extends StatelessWidget {
           foregroundColor: Colors.white,
           backgroundColor: ColorPalette.primary,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(15.r),
           ),
         ),
         onPressed: onTap,
         child: SizedBox(
-          width: 300.h,
+          width: 300.w,
           height: 60.h,
           child: Center(
             child: Text(
               text,
               style: TextStyles().montserrat400_13.copyWith(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                   ),
             ),
           ),

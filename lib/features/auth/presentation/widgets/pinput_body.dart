@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 
 class PinPutBody extends StatefulWidget {
@@ -37,12 +38,12 @@ class _PinPutBodyState extends State<PinPutBody> {
             crossAxisAlignment: CrossAxisAlignment.center,
             keyboardType: TextInputType.number,
             defaultPinTheme: PinTheme(
-              height: 55,
-              width: 55,
-              textStyle: const TextStyle(fontSize: 20, color: Colors.black),
+              height: 55.h,
+              width: 55.w,
+              textStyle:  TextStyle(fontSize: 20.sp, color: Colors.black),
               decoration: BoxDecoration(
                 color: Colors.grey[300]!,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
             ),
           ),
