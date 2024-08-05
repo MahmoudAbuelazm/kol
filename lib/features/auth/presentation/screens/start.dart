@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
 import 'package:kol/features/auth/presentation/widgets/forward_button.dart';
 import 'package:kol/resources/styles/text_styles.dart';
@@ -20,38 +21,33 @@ class Start extends StatelessWidget {
             'KOL',
             style: TextStyles().logo,
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          20.verticalSpace,
           Text(
             'Lorem Ipsum is simply dummy text',
             style: TextStyles().montserrat400_13,
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          20.verticalSpace,
           Text(
             'and typesetting.',
             style: TextStyles().montserrat400_13,
           ),
-          const SizedBox(
-            height: 200,
+          const Spacer(
+            flex: 3,
           ),
           CustomButton(
-              text: 'Lets get started',
-              onTap: () {
-                AppRouter.goRouter.pushNamed(AppRoute.createEmail.name);
-              }),
-          const SizedBox(
-            height: 18,
+            text: 'Lets get started',
+            onTap: () {
+              AppRouter.goRouter.pushNamed(AppRoute.createEmail.name);
+            },
           ),
+          18.verticalSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Already have an account',
                   style: TextStyles().montserrat400_13),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.w,
               ),
               ForwardButton(
                 onPressed: () {

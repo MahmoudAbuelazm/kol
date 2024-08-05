@@ -7,10 +7,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: LoginBody(),
-        ),
+        child: LoginBody(),
       ),
     );
   }

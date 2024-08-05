@@ -7,11 +7,9 @@ class CreateEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.all(20.0),
+      body: SingleChildScrollView(
         child: CreateEmailBody(),
       ),
-    ));
+    );
   }
 }

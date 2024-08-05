@@ -24,6 +24,18 @@ class TextStyles {
         fontSize: 50,
         fontFamily: 'Montserrat',
       );
+       TextStyle get montserrat700_16 => const TextStyle(
+        fontWeight: FontWeight.w700,
+        fontSize: 16,
+        fontFamily: 'Montserrat',
+        color: ColorPalette.primary,
+      );
+       TextStyle get montserrat300_19 => const TextStyle(
+        fontWeight: FontWeight.w300,
+        fontSize: 19,
+        fontFamily: 'Montserrat',
+        color: Colors.black,
+      );
   TextStyle get nunitoSans300_15 => const TextStyle(
         fontWeight: FontWeight.w300,
         fontSize: 15,
