@@ -193,19 +193,19 @@ class CacheServices {
   }
 
   bool? getIsPatient() {
-    bool? IsPatient;
+    bool? isPatient;
     try {
       // String? json = prefs.getString('rememberMe');
       bool? json = prefs.getBool('isPatient');
       if (json != null) {
-        IsPatient = json;
+        isPatient = json;
       } else {
         log('IsPatient not loaded', name: 'CacheService::getIsPatient');
       }
     } catch (e) {
       log(e.toString(), name: 'CacheService::getIsPatient');
     }
-    return IsPatient;
+    return isPatient;
   }
 
   Future<bool> setIsPatient(bool trueFalse) async {

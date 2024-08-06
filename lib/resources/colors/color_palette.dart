@@ -7,4 +7,6 @@ class ColorPalette {
   static const Color deepGrey = Color(0xff202020);
   static const Color lightGrey = Color(0xffF8F8F8);
 
+  static const Color lighpink = Color(0xffF8B9BD);
+  static const Color lightblack = Color(0xffD9D9D9);
 }

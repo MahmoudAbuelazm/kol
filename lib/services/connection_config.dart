@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:rxdart/subjects.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
@@ -17,11 +19,11 @@ class ConnectionConfig {
 
     if (connectivity.contains(ConnectivityResult.mobile) ||
         connectivity.contains(ConnectivityResult.wifi)) {
-      print('Data connection is available.');
+      log('Data connection is available.');
       isConnected.value = true;
       return;
     } else if (connectivity.contains(ConnectivityResult.none)) {
-      print('You are disconnected from the internet.');
+      log('You are disconnected from the internet.');
       isConnected.value = false;
       return;
     }
@@ -29,11 +31,11 @@ class ConnectionConfig {
     _connectivity.onConnectivityChanged.listen((status) {
       if (status.contains(ConnectivityResult.mobile) ||
           status.contains(ConnectivityResult.mobile)) {
-        print('Data connection is available.');
+        log('Data connection is available.');
         isConnected.value = true;
         return;
       } else if (status.contains(ConnectivityResult.none)) {
-        print('You are disconnected from the internet.');
+        log('You are disconnected from the internet.');
         isConnected.value = false;
         return;
       }

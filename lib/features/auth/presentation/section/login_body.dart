@@ -14,61 +14,73 @@ class LoginBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 160.h,
-          right: -110.w,
+          top: 268.h,
+          right: 0,
           child: Image.asset(
             AppAssets.bubble5,
-            width: 250.w,
-            height: 250.h,
-            fit: BoxFit.fitHeight,
-          ),
-        ),
-        Positioned(
-          top: -100.h,
-          left: -60.w,
-          child: Image.asset(
-            AppAssets.bubble3,
-            width: 300.w,
-            height: 360.h,
+            width: 90.w,
+            height: 150.h,
             fit: BoxFit.fill,
           ),
         ),
         Positioned(
-          top: -20.h,
-          left: -50.w,
+          top: 0,
+          left: 0,
+          child: Image.asset(
+            AppAssets.bubble3,
+            width: 245.w,
+            height: 280.h,
+            fit: BoxFit.fill,
+          ),
+        ),
+        Positioned(
+          top: 0,
+          left: 0,
           child: Image.asset(
             AppAssets.bubble4,
-            width: 373.w,
-            height: 325.h,
+            width: 300.w,
+            height: 340.h,
+            fit: BoxFit.fill,
+          ),
+        ),
+        Positioned(
+          right: 0,
+          bottom: 0,
+          child: Image.asset(
+            AppAssets.bubble6,
+            width: 230.w,
+            height: 300.h,
             fit: BoxFit.fill,
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+          padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 30.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              200.verticalSpace,
+              SizedBox(
+                height: 238.h,
+              ),
               Text(
                 'Login',
-                style: TextStyles().montserrat700_50,
+                style: TextStyles.montserrat700_50,
               ),
               Text(
                 'Good to see you back!',
                 style: TextStyles().nunitoSans300_15.copyWith(fontSize: 19),
               ),
-              80.verticalSpace,
+              64.verticalSpace,
               const CustomTextField(
                 hintText: 'Mobile number',
               ),
-              100.verticalSpace,
+              160.verticalSpace,
               CustomButton(
                   text: 'Send OTP',
                   onTap: () {
                     AppRouter.goRouter.pushNamed(AppRoute.otp.name);
                   }),
-              20.verticalSpace,
+              14.verticalSpace,
               const Align(
                 alignment: Alignment.center,
                 child: CancelButton(),

@@ -13,44 +13,46 @@ class OtpBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: -100.h,
-          left: -60.w,
+          top: 0,
+          left: 0,
           child: Image.asset(
             AppAssets.bubble3,
-            width: 300.w,
-            height: 360.h,
+            width: 245.w,
+            height: 290.h,
             fit: BoxFit.fill,
           ),
         ),
         Positioned(
-          top: -20.h,
-          left: -50.w,
+          top: 0,
+          left: 0,
           child: Image.asset(
             AppAssets.bubble4,
-            width: 373.w,
-            height: 325.h,
+            width: 300.w,
+            height: 330.h,
             fit: BoxFit.fill,
           ),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            200.verticalSpace,
+            SizedBox(
+              height: 280.h,
+            ),
             Text(
               'Hello, Romina!!',
-              style: TextStyles().montserrat700_50.copyWith(fontSize: 28),
+              style: TextStyles.montserrat700_50.copyWith(fontSize: 28),
             ),
             40.verticalSpace,
             const OtpColumn(),
-            220.verticalSpace,
+            210.verticalSpace,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Send again', style: TextStyles().montserrat400_13),
+                Text('Send again', style: TextStyles.montserrat400_13),
                 10.horizontalSpace,
                 ForwardButton(
                   onPressed: () {
-                    AppRouter.goRouter.pushNamed(AppRoute.createEmail.name);
+                    AppRouter.goRouter.pushNamed(AppRoute.home.name);
                   },
                 ),
               ],

@@ -15,35 +15,39 @@ class CreateEmailBody extends StatelessWidget {
       children: [
         Positioned(
           top: 40.h,
-          right: -100.w,
+          right: 0,
           child: Image.asset(
             AppAssets.bubble1,
-            width: 200.w,
-            height: 300.h,
+            width: 92.w,
+            height: 280.h,
             fit: BoxFit.fill,
           ),
         ),
         Positioned(
-          top: -115.h,
-          left: -50.w,
+          top: 0,
+          left: 0,
           child: Image.asset(
             AppAssets.bubble2,
-            width: 311.w,
-            height: 367.h,
+            width: 200.w,
+            height: 220.h,
             fit: BoxFit.fill,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              50.verticalSpace,
+              SizedBox(
+                height: 100.h,
+              ),
               Text(
                 'Create Account',
-                style: TextStyles().montserrat700_50,
+                style: TextStyles
+                    .montserrat700_50
+                    .copyWith(height: 1.09, letterSpacing: -.1),
               ),
-              80.verticalSpace,
+              60.verticalSpace,
               const CustomTextField(
                 hintText: 'Name',
               ),
@@ -55,13 +59,13 @@ class CreateEmailBody extends StatelessWidget {
               const CustomTextField(
                 hintText: 'Mobile number',
               ),
-              100.verticalSpace,
+              120.verticalSpace,
               CustomButton(
                   text: 'Send OTP',
                   onTap: () {
                     AppRouter.goRouter.pushNamed(AppRoute.login.name);
                   }),
-              20.verticalSpace,
+               
               const CancelButton()
             ],
           ),

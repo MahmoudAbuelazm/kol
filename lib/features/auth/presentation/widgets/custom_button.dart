@@ -26,13 +26,9 @@ class CustomButton extends StatelessWidget {
       onPressed: onTap,
       child: Center(
         child: Padding(
-          padding:  EdgeInsets.symmetric(vertical: 17.h, horizontal: 20.w),
-          child: Text(
-            text,
-            style: TextStyles().montserrat400_13.copyWith(
-                  fontSize: 16.sp,
-                ),
-          ),
+          padding: EdgeInsets.symmetric(vertical: 17.h, horizontal: 20.w),
+          child: Text(text,
+              style: TextStyles.montserrat400_13.copyWith(color: Colors.white)),
         ),
       ),
     );
