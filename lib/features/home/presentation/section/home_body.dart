@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/colors/color_palette.dart';
+import 'package:kol/utils/constants.dart';
 
 import '../../../../resources/styles/text_styles.dart';
 import '../../../auth/presentation/widgets/forward_button.dart';
@@ -68,53 +69,68 @@ class HomeBody extends StatelessWidget {
               ],
             ),
             4.verticalSpace,
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CategoriesCard(
-                  text: "Food blogger",
-                  count: "109",
-                  image: AppAssets.foodblogger,
-                ),
-                CategoriesCard(
-                  text: "Travel blogger",
-                  count: "530",
-                  image: AppAssets.travelblogger,
-                ),
-              ],
+            GridView(
+              shrinkWrap: true,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisExtent: 195.h,
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 15.h,
+                  crossAxisCount: 2),
+              children: Constants.categories
+                  .map((e) => CategoriesCard(
+                        text: e.name,
+                        count: e.count,
+                        image: e.image,
+                      ))
+                  .toList(),
             ),
-            15.verticalSpace,
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CategoriesCard(
-                  text: "Fitness blogger",
-                  count: "87",
-                  image: AppAssets.fitnessblogger,
-                ),
-                CategoriesCard(
-                  text: "Fashion blogger",
-                  count: "218",
-                  image: AppAssets.fashionblogger,
-                ),
-              ],
-            ),
-            15.verticalSpace,
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CategoriesCard(
-                  text: "Lifestyle blogger",
-                  count: "218",
-                  image: AppAssets.lifestyleblogger,
-                ),
-                CategoriesCard(
-                  text: "Medical blogger",
-                  count: "218",
-                  image: AppAssets.medicalblogger,
-                ),
-              ],
-            ),
+            // const Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     CategoriesCard(
+            //       text: "Food blogger",
+            //       count: "109",
+            //       image: AppAssets.foodblogger,
+            //     ),
+            //     CategoriesCard(
+            //       text: "Travel blogger",
+            //       count: "530",
+            //       image: AppAssets.travelblogger,
+            //     ),
+            //   ],
+            // ),
+            // 15.verticalSpace,
+            // const Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     CategoriesCard(
+            //       text: "Fitness blogger",
+            //       count: "87",
+            //       image: AppAssets.fitnessblogger,
+            //     ),
+            //     CategoriesCard(
+            //       text: "Fashion blogger",
+            //       count: "218",
+            //       image: AppAssets.fashionblogger,
+            //     ),
+            //   ],
+            // ),
+            // 15.verticalSpace,
+            // const Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     CategoriesCard(
+            //       text: "Lifestyle blogger",
+            //       count: "218",
+            //       image: AppAssets.lifestyleblogger,
+            //     ),
+            //     CategoriesCard(
+            //       text: "Medical blogger",
+            //       count: "218",
+            //       image: AppAssets.medicalblogger,
+            //     ),
+            //   ],
+            // ),
             15.verticalSpace,
             Text(
               "All bloggers",
