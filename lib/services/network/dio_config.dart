@@ -69,7 +69,7 @@ class DioConfig {
       //// refresh token work
 
       log("::: Api Url : ${options.uri}");
-      //TODO uncomment
+      // uncomment
       // if (CacheServices.instance.getUserModel() != null) {
       //   UserModel? userModel = CacheServices.instance.getUserModel();
       //   if (userModel != null) {
@@ -83,7 +83,7 @@ class DioConfig {
       // options.headers = headers;
 
       if (!ConnectionConfig.instance.isConnected.value) {
-        //TODO uncomment
+        // uncomment
         // MyApplication.showToastView(
         //     message: 'Unable to connect to the Internet');
 
@@ -95,7 +95,7 @@ class DioConfig {
           // stackTrace: options.sta
         ));
       }
-      print('skjkjndbjd ${options.headers}');
+      log('skjkjndbjd ${options.headers}');
       handler.next(options); // modify your request
     }, onResponse: (response, handler) {
       // If the call to handler.next(response) is not made, the response won't proceed to the next step.
@@ -129,7 +129,7 @@ class DioConfig {
           type: e.type,
           stackTrace: e.stackTrace));
 
-      //TODO refresh token
+      // refresh token
       // if (e.response != null) {
       //   if (e.response!.statusCode == 401) {
       //     //// new refresh token work start
@@ -145,7 +145,7 @@ class DioConfig {
       //     return handler.resolve(e.response!);
       //   }
 
-      //   //TODO to many requests
+      //   // to many requests
       //   //  else if (e.response!.statusCode == 429) {
       //   //   _baseView != null
       //   //       ? _baseView?.showErrorMsg('Too Many Requests')
@@ -162,7 +162,7 @@ class DioConfig {
     return dio;
   }
 
-//TODO refresh token
+// refresh token
   // static Future<String?> newRefreshToken() async {
   //   try {
   //     // Response response;

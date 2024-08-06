@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:kol/services/Local/AppLocalizations.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 import 'services/Local/local_cubit.dart';
 import 'services/pre_app_config.dart';
 import 'services/router.dart';
@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           return ScreenUtilInit(
               designSize: const Size(375, 812),
+              minTextAdapt: true,
+              splitScreenMode: true,
               builder: (_, child) {
                 return SafeArea(
                   child: MaterialApp.router(
@@ -38,11 +40,9 @@ class MyApp extends StatelessWidget {
                         Locale('ar')
                       ],
                       debugShowCheckedModeBanner: false,
-                      locale: 
-                      state is ChangeLocaleState
+                      locale: state is ChangeLocaleState
                           ? state.local
-                          : 
-                          const Locale('ar'),
+                          : const Locale('ar'),
                       routerConfig: AppRouter.goRouter),
                 );
               });

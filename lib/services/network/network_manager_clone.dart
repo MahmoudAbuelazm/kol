@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:kol/services/network/dio_config.dart';
 
@@ -11,8 +12,8 @@ class NetworkManagerClone {
 
   Future<T> get<T>(String url, {Map<String, dynamic>? params}) async {
     try {
-      if (params == null) params = {};
-      print(params);
+      params ??= {};
+      log(params.toString());
       Response response = await dio.get(url, queryParameters: params);
 
       return response.data;
@@ -25,8 +26,8 @@ class NetworkManagerClone {
   Future<T> patch<T>(String url,
       {dynamic body = const {}, Map<String, dynamic>? headers}) async {
     try {
-      if (body == null) body = {};
-      print(body);
+      body ??= {};
+      log(body);
 
       var formData = (headers != null) ? body : body;
       Response response = await dio.patch(url,
@@ -42,8 +43,8 @@ class NetworkManagerClone {
   Future<T> put<T>(String url,
       {dynamic body = const {}, Map<String, dynamic>? headers}) async {
     try {
-      if (body == null) body = {};
-      print(body);
+      body ??= {};
+      log(body);
 
       var formData = (headers != null) ? body : body;
       Response response = await dio.put(url,
@@ -58,8 +59,8 @@ class NetworkManagerClone {
 
   Future<T> delete<T>(String url,  {dynamic body = const {}, Map<String, dynamic>? headers}) async {
     try {
-      if (body == null) body = {};
-      print(body);
+      body ??= {};
+      log(body);
 
       var formData = (headers != null) ? body : body;
       Response response = await dio.delete(url,
@@ -83,8 +84,8 @@ class NetworkManagerClone {
   Future<T> post<T>(String url,
       {dynamic body = const {}, Map<String, dynamic>? headers}) async {
     try {
-      if (body == null) body = {};
-      print(body);
+      body ??= {};
+      log(body);
 
       var formData = (headers != null) ? body : json.encode(body);
       Response response = await dio.post(url,

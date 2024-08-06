@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/features/auth/presentation/widgets/forward_button.dart';
+import 'package:kol/features/auth/presentation/widgets/otp_column.dart';
+import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
 import 'package:kol/services/router.dart';
 
@@ -7,25 +10,52 @@ class OtpBody extends StatelessWidget {
   const OtpBody({super.key});
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Stack(
       children: [
-        const SizedBox(height: 200),
-        Text(
-          'Hello, Romina!!',
-          style: TextStyles().montserrat700_50.copyWith(fontSize: 28),
+        Positioned(
+          top: 0,
+          left: 0,
+          child: Image.asset(
+            AppAssets.bubble3,
+            width: 245.w,
+            height: 290.h,
+            fit: BoxFit.fill,
+          ),
         ),
-        Row(
+        Positioned(
+          top: 0,
+          left: 0,
+          child: Image.asset(
+            AppAssets.bubble4,
+            width: 300.w,
+            height: 330.h,
+            fit: BoxFit.fill,
+          ),
+        ),
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Send again', style: TextStyles().montserrat400_13),
-            const SizedBox(
-              width: 20,
+            SizedBox(
+              height: 280.h,
             ),
-            ForwardButton(
-              onPressed: () {
-                AppRouter.goRouter.pushNamed(AppRoute.createEmail.name);
-              },
+            Text(
+              'Hello, Romina!!',
+              style: TextStyles.montserrat700_50.copyWith(fontSize: 28),
+            ),
+            40.verticalSpace,
+            const OtpColumn(),
+            210.verticalSpace,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Send again', style: TextStyles.montserrat400_13),
+                10.horizontalSpace,
+                ForwardButton(
+                  onPressed: () {
+                    AppRouter.goRouter.pushNamed(AppRoute.home.name);
+                  },
+                ),
+              ],
             ),
           ],
         ),

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/features/auth/presentation/widgets/cancel_button.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_text_field.dart';
+import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
 import 'package:kol/services/router.dart';
 
@@ -9,38 +11,65 @@ class CreateEmailBody extends StatelessWidget {
   const CreateEmailBody({super.key});
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+    return Stack(
       children: [
-        const SizedBox(height: 50),
-        Text(
-          'Create Account',
-          style: TextStyles().montserrat700_50,
+        Positioned(
+          top: 40.h,
+          right: 0,
+          child: Image.asset(
+            AppAssets.bubble1,
+            width: 92.w,
+            height: 280.h,
+            fit: BoxFit.fill,
+          ),
         ),
-        const SizedBox(height: 80),
-        const CustomTextField(
-          hintText: 'Name',
+        Positioned(
+          top: 0,
+          left: 0,
+          child: Image.asset(
+            AppAssets.bubble2,
+            width: 200.w,
+            height: 220.h,
+            fit: BoxFit.fill,
+          ),
         ),
-        const SizedBox(
-          height: 15,
+        Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 100.h,
+              ),
+              Text(
+                'Create Account',
+                style: TextStyles
+                    .montserrat700_50
+                    .copyWith(height: 1.09, letterSpacing: -.1),
+              ),
+              60.verticalSpace,
+              const CustomTextField(
+                hintText: 'Name',
+              ),
+              15.verticalSpace,
+              const CustomTextField(
+                hintText: 'Country',
+              ),
+              15.verticalSpace,
+              const CustomTextField(
+                hintText: 'Mobile number',
+              ),
+              120.verticalSpace,
+              CustomButton(
+                  text: 'Send OTP',
+                  onTap: () {
+                    AppRouter.goRouter.pushNamed(AppRoute.login.name);
+                  }),
+               
+              const CancelButton()
+            ],
+          ),
         ),
-        const CustomTextField(
-          hintText: 'Country',
-        ),
-        const SizedBox(
-          height: 15,
-        ),
-        const CustomTextField(
-          hintText: 'Mobile number',
-        ),
-        const SizedBox(height: 100),
-        CustomButton(text: 'Send OTP', onTap: () {
-         AppRouter.goRouter.pushNamed(AppRoute.login.name);
-        }),
-        const SizedBox(
-          height: 20,
-        ),
-        const CancelButton()
       ],
     );
   }

@@ -3,9 +3,15 @@ import 'package:kol/features/auth/presentation/screens/create_email.dart';
 import 'package:kol/features/auth/presentation/screens/login.dart';
 import 'package:kol/features/auth/presentation/screens/otp.dart';
 import 'package:kol/features/auth/presentation/screens/start.dart';
-import 'package:kol/home.dart';
+import 'package:kol/features/home/presentation/screen/home_screen.dart';
 
-enum AppRoute { home, start, createEmail ,login,otp}
+enum AppRoute {
+  home,
+  start,
+  createEmail,
+  login,
+  otp,
+}
 
 class AppRouter {
   static final GoRouter goRouter = GoRouter(
@@ -17,7 +23,7 @@ class AppRouter {
           path: '/home',
           name: AppRoute.home.name,
           builder: (context, state) {
-            return const Home();
+            return const HomeScreen();
           },
         ),
         GoRoute(
@@ -34,14 +40,14 @@ class AppRouter {
             return const CreateEmail();
           },
         ),
-         GoRoute(
+        GoRoute(
           path: '/login',
           name: AppRoute.login.name,
           builder: (context, state) {
             return const Login();
           },
         ),
-         GoRoute(
+        GoRoute(
           path: '/otp',
           name: AppRoute.otp.name,
           builder: (context, state) {
