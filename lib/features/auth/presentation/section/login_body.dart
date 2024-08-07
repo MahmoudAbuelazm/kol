@@ -70,17 +70,23 @@ class LoginBody extends StatelessWidget {
                 'Good to see you back!',
                 style: TextStyles().nunitoSans300_15.copyWith(fontSize: 19),
               ),
-              64.verticalSpace,
+            SizedBox(
+              height: 64.h,
+            ),
               const CustomTextField(
                 hintText: 'Mobile number',
               ),
-              160.verticalSpace,
+              SizedBox(
+              height: 160.h,
+            ),
               CustomButton(
                   text: 'Send OTP',
                   onTap: () {
                     AppRouter.goRouter.pushNamed(AppRoute.otp.name);
                   }),
-              14.verticalSpace,
+             SizedBox(
+              height: 14.h,
+            ),
               const Align(
                 alignment: Alignment.center,
                 child: CancelButton(),

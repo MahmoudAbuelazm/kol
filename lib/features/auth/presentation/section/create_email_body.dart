@@ -43,29 +43,35 @@ class CreateEmailBody extends StatelessWidget {
               ),
               Text(
                 'Create Account',
-                style: TextStyles
-                    .montserrat700_50
+                style: TextStyles.montserrat700_50
                     .copyWith(height: 1.09, letterSpacing: -.1),
               ),
-              60.verticalSpace,
+              SizedBox(
+                height: 60.h,
+              ),
               const CustomTextField(
                 hintText: 'Name',
               ),
-              15.verticalSpace,
+              SizedBox(
+                height: 15.h,
+              ),
               const CustomTextField(
                 hintText: 'Country',
               ),
-              15.verticalSpace,
+              SizedBox(
+                height: 15.h,
+              ),
               const CustomTextField(
                 hintText: 'Mobile number',
               ),
-              120.verticalSpace,
+              SizedBox(
+                height: 120.h,
+              ),
               CustomButton(
                   text: 'Send OTP',
                   onTap: () {
                     AppRouter.goRouter.pushNamed(AppRoute.login.name);
                   }),
-               
               const CancelButton()
             ],
           ),

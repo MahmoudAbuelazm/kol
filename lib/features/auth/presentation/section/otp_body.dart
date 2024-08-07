@@ -42,14 +42,20 @@ class OtpBody extends StatelessWidget {
               'Hello, Romina!!',
               style: TextStyles.montserrat700_50.copyWith(fontSize: 28),
             ),
-            40.verticalSpace,
+            SizedBox(
+              height: 40.h,
+            ),
             const OtpColumn(),
-            210.verticalSpace,
+            SizedBox(
+              height: 210.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Send again', style: TextStyles.montserrat400_13),
-                10.horizontalSpace,
+                SizedBox(
+                  width: 10.h,
+                ),
                 ForwardButton(
                   onPressed: () {
                     AppRouter.goRouter.pushNamed(AppRoute.home.name);

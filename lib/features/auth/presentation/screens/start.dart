@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
 import 'package:kol/features/auth/presentation/widgets/forward_button.dart';
+import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
 import 'package:kol/services/router.dart';
 
@@ -10,34 +11,45 @@ class Start extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-      child: SingleChildScrollView(
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
         child: Column(
           children: [
-            190.verticalSpace,
-            Text(
-              'KOL',
-              style: TextStyles().logo,
+            SizedBox(
+              height: 190.h,
             ),
-            20.verticalSpace,
+            Image.asset(
+              AppAssets.logo,
+              width: 208.w,
+              height: 183.h,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
             Text(
               'Lorem Ipsum is simply dummy text',
               style: TextStyles.montserrat400_13,
             ),
-            10.verticalSpace,
+            SizedBox(
+              height: 10.h,
+            ),
             Text(
               'and typesetting.',
               style: TextStyles.montserrat400_13,
             ),
-            180.verticalSpace,
+            SizedBox(
+              height: 180.h,
+            ),
             CustomButton(
               text: 'Lets get started',
               onTap: () {
                 AppRouter.goRouter.pushNamed(AppRoute.createEmail.name);
               },
             ),
-            18.verticalSpace,
+            SizedBox(
+              height: 18.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -53,10 +65,9 @@ class Start extends StatelessWidget {
                 ),
               ],
             ),
-            50.verticalSpace,
           ],
         ),
       ),
-    ));
+    );
   }
 }

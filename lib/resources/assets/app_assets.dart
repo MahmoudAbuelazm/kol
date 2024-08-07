@@ -16,4 +16,5 @@ class AppAssets {
   static const String instagram = 'assets/images/instagram.png';
   static const String tiktok = 'assets/images/tiktok.png';
   static const String settings = 'assets/images/settings.svg';
+  static const String logo = 'assets/images/logo.jpg';
 }

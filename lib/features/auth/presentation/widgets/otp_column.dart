@@ -12,9 +12,13 @@ class OtpColumn extends StatelessWidget {
         'OTP',
         style: TextStyles().montserrat300_19,
       ),
-      16.verticalSpace,
+      SizedBox(
+        height: 16.h,
+      ),
       const PinPutBody(),
-      8.verticalSpace,
+      SizedBox(
+        height: 8.h,
+      ),
       Text('00:60', style: TextStyles().montserrat700_16),
     ]);
   }
