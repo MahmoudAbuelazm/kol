@@ -70,20 +70,23 @@ class HomeBody extends StatelessWidget {
             ),
             4.verticalSpace,
             GridView(
-              shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisExtent: 195.h,
-                  crossAxisSpacing: 5,
-                  mainAxisSpacing: 15.h,
-                  crossAxisCount: 2),
-              children: Constants.categories
-                  .map((e) => CategoriesCard(
-                        text: e.name,
-                        count: e.count,
-                        image: e.image,
-                      ))
-                  .toList(),
-            ),
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisSpacing: 5.w,
+                    mainAxisSpacing: 15.h,
+                    childAspectRatio: .8,
+                    crossAxisCount: 2),
+                children: [
+                  ...List.generate(
+                    Constants.categories.length,
+                    (index) => CategoriesCard(
+                      text: Constants.categories[index].name,
+                      count: Constants.categories[index].count,
+                      image: Constants.categories[index].image,
+                    ),
+                  ),
+                ]),
             // const Row(
             //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
             //   children: [
