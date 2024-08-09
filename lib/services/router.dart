@@ -4,6 +4,7 @@ import 'package:kol/features/auth/presentation/screens/login.dart';
 import 'package:kol/features/auth/presentation/screens/otp.dart';
 import 'package:kol/features/auth/presentation/screens/start.dart';
 import 'package:kol/features/home/presentation/screen/home_screen.dart';
+import 'package:kol/features/request/presentation/screen/request_screen.dart';
 
 enum AppRoute {
   home,
@@ -11,6 +12,7 @@ enum AppRoute {
   createEmail,
   login,
   otp,
+  request,
 }
 
 class AppRouter {
@@ -52,6 +54,17 @@ class AppRouter {
           name: AppRoute.otp.name,
           builder: (context, state) {
             return const Otp();
+          },
+        ),
+        GoRoute(
+          path: '/request',
+          name: AppRoute.request.name,
+          builder: (context, state) {
+            final Map<String, dynamic> map =
+                state.extra as Map<String, dynamic>;
+            return RequestScreen(
+              bloggersModel: map['bloggersModel'],
+            );
           },
         ),
       ]);

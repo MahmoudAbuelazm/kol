@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/colors/color_palette.dart';
+import 'package:kol/services/router.dart';
 import 'package:kol/utils/constants.dart';
 
 import '../../../../resources/styles/text_styles.dart';
@@ -87,106 +88,36 @@ class HomeBody extends StatelessWidget {
                     ),
                   ),
                 ]),
-            // const Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     CategoriesCard(
-            //       text: "Food blogger",
-            //       count: "109",
-            //       image: AppAssets.foodblogger,
-            //     ),
-            //     CategoriesCard(
-            //       text: "Travel blogger",
-            //       count: "530",
-            //       image: AppAssets.travelblogger,
-            //     ),
-            //   ],
-            // ),
-            // 15.verticalSpace,
-            // const Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     CategoriesCard(
-            //       text: "Fitness blogger",
-            //       count: "87",
-            //       image: AppAssets.fitnessblogger,
-            //     ),
-            //     CategoriesCard(
-            //       text: "Fashion blogger",
-            //       count: "218",
-            //       image: AppAssets.fashionblogger,
-            //     ),
-            //   ],
-            // ),
-            // 15.verticalSpace,
-            // const Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     CategoriesCard(
-            //       text: "Lifestyle blogger",
-            //       count: "218",
-            //       image: AppAssets.lifestyleblogger,
-            //     ),
-            //     CategoriesCard(
-            //       text: "Medical blogger",
-            //       count: "218",
-            //       image: AppAssets.medicalblogger,
-            //     ),
-            //   ],
-            // ),
             15.verticalSpace,
             Text(
               "All bloggers",
               style: TextStyles.montserrat700_50.copyWith(fontSize: 18.sp),
             ),
             8.verticalSpace,
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomBloggerCard(
-                  image: AppAssets.foodblogger,
-                  name: "Name",
-                  price: "\$17,00",
-                ),
-                CustomBloggerCard(
-                  image: AppAssets.travelblogger,
-                  name: "Name",
-                  price: "\$17,00",
-                ),
-              ],
-            ),
-            4.verticalSpace,
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomBloggerCard(
-                  image: AppAssets.fitnessblogger,
-                  name: "Name",
-                  price: "\$17,00",
-                ),
-                CustomBloggerCard(
-                  image: AppAssets.fashionblogger,
-                  name: "Name",
-                  price: "\$17,00",
-                ),
-              ],
-            ),
-            4.verticalSpace,
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomBloggerCard(
-                  image: AppAssets.lifestyleblogger,
-                  name: "Name",
-                  price: "\$17,00",
-                ),
-                CustomBloggerCard(
-                  image: AppAssets.medicalblogger,
-                  name: "Name",
-                  price: "\$17,00",
-                ),
-              ],
-            ),
+            GridView(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisSpacing: 15.w,
+                    mainAxisSpacing: 15.h,
+                    childAspectRatio: .7,
+                    crossAxisCount: 2),
+                children: [
+                  ...List.generate(
+                    Constants.bloggers.length,
+                    (index) => CustomBloggerCard(
+                      onTap: () {
+                        AppRouter.goRouter.pushNamed(AppRoute.request.name,
+                            extra: {
+                              'bloggersModel': Constants.bloggers[index]
+                            });
+                      },
+                      name: Constants.bloggers[index].name,
+                      price: Constants.bloggers[index].price,
+                      image: Constants.bloggers[index].image,
+                    ),
+                  ),
+                ]),
           ],
         ),
       ),

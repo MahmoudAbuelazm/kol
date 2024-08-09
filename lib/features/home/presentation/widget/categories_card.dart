@@ -38,7 +38,9 @@ class CategoriesCard extends StatelessWidget {
                     )
                 ],
               ),
-              8.verticalSpace,
+              SizedBox(
+                height: 8.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
