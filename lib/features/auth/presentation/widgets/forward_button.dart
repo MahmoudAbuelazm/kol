@@ -8,8 +8,8 @@ class ForwardButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 30.r,
-      height: 30.r,
+      width: 30.w,
+      height: 30.h,
       decoration: const BoxDecoration(
         color: ColorPalette.pink,
         shape: BoxShape.circle,
