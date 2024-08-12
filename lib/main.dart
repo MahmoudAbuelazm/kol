@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                   child: MaterialApp.router(
                       localizationsDelegates: const [
                         AppLocalizations
-                            .delegate, // Localization basedon mobile defaulte language
+                            .delegate, 
                         GlobalMaterialLocalizations.delegate,
                         GlobalWidgetsLocalizations.delegate,
                         GlobalCupertinoLocalizations.delegate

@@ -39,7 +39,11 @@ class HomeBody extends StatelessWidget {
                 SizedBox(
                   width: 30.w,
                 ),
-                SvgPicture.asset(AppAssets.settings)
+                GestureDetector(
+                    onTap: () {
+                      AppRouter.goRouter.pushNamed(AppRoute.filTer.name);
+                    },
+                    child: SvgPicture.asset(AppAssets.settings))
               ],
             ),
             SizedBox(

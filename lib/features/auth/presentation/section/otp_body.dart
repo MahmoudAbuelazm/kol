@@ -58,7 +58,7 @@ class OtpBody extends StatelessWidget {
                 ),
                 ForwardButton(
                   onPressed: () {
-                    AppRouter.goRouter.pushNamed(AppRoute.home.name);
+                    AppRouter.goRouter.pushNamed(AppRoute.mainscreen.name);
                   },
                 ),
               ],

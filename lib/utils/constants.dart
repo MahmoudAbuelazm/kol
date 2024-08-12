@@ -68,4 +68,13 @@ class Constants {
       price: "\$17,00",
     ),
   ];
+
+static List<String> ages=[
+   "10's",
+    "20's",
+    "30's",
+    "40's",
+    "50's",
+    "60's",
+];
 }

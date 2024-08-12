@@ -3,8 +3,11 @@ import 'package:kol/features/auth/presentation/screens/create_email.dart';
 import 'package:kol/features/auth/presentation/screens/login.dart';
 import 'package:kol/features/auth/presentation/screens/otp.dart';
 import 'package:kol/features/auth/presentation/screens/start.dart';
+import 'package:kol/features/filter/presentation/screen/filter_screen.dart';
 import 'package:kol/features/home/presentation/screen/home_screen.dart';
 import 'package:kol/features/request/presentation/screen/request_screen.dart';
+
+import '../common/main_screen.dart';
 
 enum AppRoute {
   home,
@@ -13,6 +16,8 @@ enum AppRoute {
   login,
   otp,
   request,
+  filTer,
+  mainscreen
 }
 
 class AppRouter {
@@ -65,6 +70,20 @@ class AppRouter {
             return RequestScreen(
               bloggersModel: map['bloggersModel'],
             );
+          },
+        ),
+        GoRoute(
+          path: '/filter',
+          name: AppRoute.filTer.name,
+          builder: (context, state) {
+            return const FilterScreen();
+          },
+        ),
+        GoRoute(
+          path: '/maiN',
+          name: AppRoute.mainscreen.name,
+          builder: (context, state) {
+            return const MainScreen();
           },
         ),
       ]);

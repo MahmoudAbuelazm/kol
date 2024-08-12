@@ -14,4 +14,9 @@ class ColorPalette {
   static const Color black = Color(0xff000000);
   static const Color white = Color(0xffFFFFFF);
   static const Color backgroundbutton = Color(0xffF9F9F9);
+  static const Color darkpink = Color(0xffF81140);
+  static const Color  lightred = Color(0xffFDF3F3);
+  static const Color  lightunselected = Color(0xffF9F9F9);
+
+  static const Color  red = Color(0xffF1AEAE);
 }
