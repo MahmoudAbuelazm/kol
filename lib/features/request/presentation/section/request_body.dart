@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/resources/styles/text_styles.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 
 import '../../../../resources/assets/app_assets.dart';
 import '../../../../resources/colors/color_palette.dart';
@@ -60,7 +61,7 @@ class RequestBody extends StatelessWidget {
                               width: 30.w,
                             ),
                             Text(
-                              "2 M followers",
+                              "2 M${"followers".tr(context)}",
                               style: TextStyles.montserrat400_13,
                             )
                           ],
@@ -75,7 +76,7 @@ class RequestBody extends StatelessWidget {
                             ),
                             6.horizontalSpace,
                             Text(
-                              "1.8 M followers",
+                              "1.8 M${"followers".tr(context)}",
                               style: TextStyles.montserrat400_13,
                             )
                           ],
@@ -88,7 +89,7 @@ class RequestBody extends StatelessWidget {
                               width: 30.w,
                             ),
                             Text(
-                              "2.5 M followers",
+                              "2.5 M${"followers".tr(context)}",
                               style: TextStyles.montserrat400_13,
                             )
                           ],

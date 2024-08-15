@@ -5,6 +5,7 @@ import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 import 'package:kol/services/router.dart';
 
 class CreateEmailBody extends StatelessWidget {
@@ -42,7 +43,7 @@ class CreateEmailBody extends StatelessWidget {
                 height: 100.h,
               ),
               Text(
-                'Create Account',
+                "Create Account".tr(context),
                 style: TextStyles.montserrat700_50
                     .copyWith(height: 1.09, letterSpacing: -.1),
               ),
@@ -50,25 +51,25 @@ class CreateEmailBody extends StatelessWidget {
                 height: 60.h,
               ),
               const CustomTextField(
-                hintText: 'Name',
+                hintText: "Name",
               ),
               SizedBox(
                 height: 15.h,
               ),
               const CustomTextField(
-                hintText: 'Country',
+                hintText: "Country",
               ),
               SizedBox(
                 height: 15.h,
               ),
               const CustomTextField(
-                hintText: 'Mobile number',
+                hintText: "Mobile number",
               ),
               SizedBox(
                 height: 120.h,
               ),
               CustomButton(
-                  text: 'Send OTP',
+                  text: "Send OTP",
                   onTap: () {
                     AppRouter.goRouter.pushNamed(AppRoute.login.name);
                   }),

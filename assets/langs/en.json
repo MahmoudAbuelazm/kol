@@ -6,5 +6,22 @@
     "male":"Male",
     "female": "Female",
     "Clear": "Clear",
-    "Apply": "Apply"
+    "Apply": "Apply",
+    "Search": "Search",
+    "Categories": "Categories",
+    "See All": "See All",
+    "All bloggers": "All bloggers",
+    "Request campaign": "Request campaign",
+    "Your campaign brief": "Your campaign brief",
+    "Cancel": "Cancel",
+    "Request": "Request",
+    "followers": "Followers",
+    "Create Account" : "Create Account",
+    "Name": "Name",
+    "Country": "Country",
+    "Mobile number": "Mobile number",
+    "Send OTP": "Send OTP",
+    "Lets get started" : "Lets get started",
+    "Already have an account" : "Already have an account"
+    
 }

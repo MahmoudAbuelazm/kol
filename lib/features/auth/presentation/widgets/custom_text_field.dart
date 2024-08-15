@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/resources/styles/text_styles.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
@@ -21,7 +22,7 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(60.r),
           borderSide: const BorderSide(color: Colors.grey),
         ),
-        hintText: hintText,
+        hintText: hintText.tr(context),
         hintStyle: TextStyles().poppins500_13.copyWith(color: Colors.grey),
       ),
     );

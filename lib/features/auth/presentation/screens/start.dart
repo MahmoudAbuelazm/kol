@@ -4,6 +4,7 @@ import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
 import 'package:kol/features/auth/presentation/widgets/forward_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 import 'package:kol/services/router.dart';
 
 class Start extends StatelessWidget {
@@ -42,7 +43,7 @@ class Start extends StatelessWidget {
               height: 180.h,
             ),
             CustomButton(
-              text: 'Lets get started',
+              text: "Lets get started",
               onTap: () {
                 AppRouter.goRouter.pushNamed(AppRoute.createEmail.name);
               },
@@ -53,7 +54,7 @@ class Start extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Already have an account',
+                Text("Already have an account".tr(context),
                     style: TextStyles.montserrat400_13),
                 SizedBox(
                   width: 20.w,

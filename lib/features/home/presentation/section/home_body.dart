@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/colors/color_palette.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 import 'package:kol/services/router.dart';
 import 'package:kol/utils/constants.dart';
 
@@ -32,7 +33,7 @@ class HomeBody extends StatelessWidget {
                           borderRadius: BorderRadius.circular(25.0)),
                       filled: true,
                       fillColor: ColorPalette.lightGrey,
-                      hintText: 'Search',
+                      hintText: 'Search'.tr(context),
                     ),
                   ),
                 ),
@@ -54,14 +55,14 @@ class HomeBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "Categories",
+                  "Categories".tr(context),
                   style: TextStyles.montserrat700_50.copyWith(fontSize: 21.sp),
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "See All",
+                      "See All".tr(context),
                       style:
                           TextStyles.montserrat700_50.copyWith(fontSize: 15.sp),
                     ),
@@ -94,7 +95,7 @@ class HomeBody extends StatelessWidget {
                 ]),
             15.verticalSpace,
             Text(
-              "All bloggers",
+              "All bloggers".tr(context),
               style: TextStyles.montserrat700_50.copyWith(fontSize: 18.sp),
             ),
             8.verticalSpace,

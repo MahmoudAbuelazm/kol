@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 
 import '../../../../resources/assets/app_assets.dart';
 import '../../../../resources/colors/color_palette.dart';
@@ -33,7 +34,7 @@ class _EntryDataContainerState extends State<EntryDataContainer> {
           children: [
             10.verticalSpace,
             Text(
-              "Request campaign",
+              "Request campaign".tr(context),
               style: TextStyles.montserrat400_13.copyWith(
                 fontSize: 15.sp,
               ),
@@ -68,7 +69,7 @@ class _EntryDataContainerState extends State<EntryDataContainer> {
                   hintStyle: TextStyles.montserrat400_13.copyWith(
                     color: ColorPalette.grey,
                   ),
-                  hintText: "Your campaign brief"),
+                  hintText: "Your campaign brief".tr(context)),
             ),
             8.verticalSpace,
             Row(
@@ -219,7 +220,7 @@ class _EntryDataContainerState extends State<EntryDataContainer> {
                           WidgetStateProperty.all(ColorPalette.primary),
                     ),
                     onPressed: () {},
-                    child: Text("Request",
+                    child: Text("Request".tr(context),
                         style: TextStyles.montserrat400_13.copyWith(
                             fontSize: 16.sp, color: ColorPalette.white))),
               ],
