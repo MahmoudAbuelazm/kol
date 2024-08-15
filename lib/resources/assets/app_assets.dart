@@ -21,6 +21,7 @@ class AppAssets {
   static const String settings = 'assets/images/settings.svg';
   static const String calender = 'assets/images/calender.svg';
   static const String homeicon = 'assets/images/homeicon.svg';
+  static const String categories = 'assets/images/categories.svg';
+  static const String profile = 'assets/images/profile.svg';
   static const String logo = 'assets/images/logo.jpg';
-  
 }

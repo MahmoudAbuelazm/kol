@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kol/common/navigation_bar.dart';
+import 'package:kol/features/favourites/presentation/screens/favourite_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
+import '../features/categories/presentation/screen/categories_screen.dart';
 import '../features/home/presentation/screen/home_screen.dart';
 import '../resources/assets/app_assets.dart';
 import '../resources/colors/color_palette.dart';
@@ -40,12 +42,6 @@ class _MainScreenState extends State<MainScreen> {
     super.dispose();
   }
 
-  void _onNavItemTapped(int index) {
-    setState(() {
-      currentSection = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -56,8 +52,8 @@ class _MainScreenState extends State<MainScreen> {
           controller: _controller,
           screens: const [
             HomeScreen(),
-            HomeScreen(),
-            HomeScreen(),
+            FavouriteScreen(),
+            CategoriesScreen(),
             HomeScreen(),
           ],
           navBarStyle: _navBarStyle,
@@ -88,12 +84,12 @@ class _MainScreenState extends State<MainScreen> {
               activeColorPrimary: ColorPalette.black,
               inactiveColorPrimary: ColorPalette.primary,
               inactiveIcon: SvgPicture.asset(
-                AppAssets.homeicon,
+                AppAssets.categories,
                 colorFilter: const ColorFilter.mode(
                     ColorPalette.primary, BlendMode.srcIn),
               ),
               icon: SvgPicture.asset(
-                AppAssets.homeicon,
+                AppAssets.categories,
                 colorFilter:
                     const ColorFilter.mode(ColorPalette.black, BlendMode.srcIn),
               ),
@@ -102,12 +98,12 @@ class _MainScreenState extends State<MainScreen> {
               activeColorPrimary: ColorPalette.black,
               inactiveColorPrimary: ColorPalette.primary,
               inactiveIcon: SvgPicture.asset(
-                AppAssets.homeicon,
+                AppAssets.profile,
                 colorFilter: const ColorFilter.mode(
                     ColorPalette.primary, BlendMode.srcIn),
               ),
               icon: SvgPicture.asset(
-                AppAssets.homeicon,
+                AppAssets.profile,
                 colorFilter:
                     const ColorFilter.mode(ColorPalette.black, BlendMode.srcIn),
               ),
