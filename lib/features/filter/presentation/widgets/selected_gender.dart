@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 
 import '../../../../resources/colors/color_palette.dart';
 import '../../../../resources/styles/text_styles.dart';
@@ -40,7 +41,7 @@ class _SelectGenderState extends State<SelectGender> {
             ),
             child: Center(
               child: Text(
-                "male",
+                "male".tr(context),
                 textAlign: TextAlign.center,
                 style: TextStyles.raleway700_12.copyWith(
                     fontSize: selectedindex == 0 ? 13.sp : 14.sp,
@@ -72,7 +73,7 @@ class _SelectGenderState extends State<SelectGender> {
             ),
             child: Center(
               child: Text(
-                "female",
+                "female".tr(context),
                 textAlign: TextAlign.center,
                 style: TextStyles.raleway700_12.copyWith(
                     fontSize: selectedindex == 1 ? 13.sp : 14.sp,

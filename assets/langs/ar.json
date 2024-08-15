@@ -1,3 +1,10 @@
 {
-    "Hello World": "مرحبا بالعالم"
+   "Filter": "تصفية",
+   "Egyptian": "مصري",
+   "Emirati": "إماراتي",
+   "Saudi": "سعودي",
+   "male": "ذكر",
+    "female": "أنثى",
+    "Clear": "مسح",
+    "Apply": "تطبيق"
 }

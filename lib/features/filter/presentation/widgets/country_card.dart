@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 
 import '../../../../resources/colors/color_palette.dart';
 import '../../../../resources/styles/text_styles.dart';
@@ -68,7 +69,7 @@ class _CountryCardState extends State<CountryCard> {
         ),
         8.verticalSpace,
         Text(
-          widget.country,
+          widget.country.tr(context),
           style:
               TextStyles.montserrat400_13.copyWith(fontWeight: FontWeight.w500),
         ),

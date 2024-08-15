@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/colors/color_palette.dart';
 import 'package:kol/resources/styles/text_styles.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 import 'package:kol/services/router.dart';
 
 import '../widgets/category_selectable_container.dart';
@@ -24,7 +25,7 @@ class FilterBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Filter",
+                "Filter".tr(context),
                 style: TextStyles.montserrat700_50.copyWith(fontSize: 16.sp),
               ),
               IconButton(
@@ -87,7 +88,7 @@ class FilterBody extends StatelessWidget {
           const Row(
             children: [
               CategorySelectableContainer(
-                category: "Fitness ",
+                category: "Fitness",
               ),
               CategorySelectableContainer(
                 category: "Fashion",
@@ -121,7 +122,7 @@ class FilterBody extends StatelessWidget {
                   AppRouter.goRouter.pop();
                 },
                 child: Text(
-                  "Clear",
+                  "Clear".tr(context),
                   style: TextStyles.montserrat400_13
                       .copyWith(fontSize: 16.sp, color: ColorPalette.primary),
                 ),
@@ -144,7 +145,7 @@ class FilterBody extends StatelessWidget {
                         WidgetStateProperty.all(ColorPalette.primary),
                   ),
                   onPressed: () {},
-                  child: Text("Apply",
+                  child: Text("Apply".tr(context),
                       style: TextStyles.montserrat400_13.copyWith(
                           fontSize: 16.sp, color: ColorPalette.white))),
             ],
