@@ -40,7 +40,7 @@ class Start extends StatelessWidget {
                 style: TextStyles.montserrat400_13,
               ),
               SizedBox(
-                height: 180.h,
+                height: 120.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +63,7 @@ class Start extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 18.h,
+                height: 60.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kol/features/auth/presentation/widgets/circle_border_for_upload_image.dart';
 import 'package:kol/features/auth/presentation/widgets/intl_phone_field.dart';
 import 'package:kol/features/auth/presentation/widgets/semi_circular_text_field.dart';
 import 'package:kol/features/auth/presentation/widgets/small_button.dart';
@@ -37,44 +38,41 @@ class BloggerRegisterOneBody extends StatelessWidget {
           child: Column(
             children: [
               const SemiCircularTextField(
-                hintText: '',
                 label: 'First Name',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
                 label: 'Last Name',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
                 label: 'Full Name',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
                 label: 'Email',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
                 label: 'Password',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
-              const SemiCircularTextField(
-                hintText: '',
-                label: 'Password',
-              ),
+              CirclurBorder(),
               SizedBox(
                 height: 35.h,
               ),
@@ -90,9 +88,12 @@ class BloggerRegisterOneBody extends StatelessWidget {
               SizedBox(
                 height: 15.h,
               ),
-              SmallButton(text: 'Continue', onTap: () {
-                 AppRouter.goRouter.pushNamed(AppRoute.bloggerRegisterTwo.name);
-              }),
+              SmallButton(
+                  text: 'Continue',
+                  onTap: () {
+                    AppRouter.goRouter
+                        .pushNamed(AppRoute.bloggerRegisterTwo.name);
+                  }),
             ],
           ),
         ),

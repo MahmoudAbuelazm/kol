@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:kol/features/auth/presentation/screens/blogger_register_four.dart';
 import 'package:kol/features/auth/presentation/screens/blogger_register_one.dart';
 import 'package:kol/features/auth/presentation/screens/blogger_register_three.dart';
 import 'package:kol/features/auth/presentation/screens/blogger_register_two.dart';
@@ -19,6 +20,7 @@ enum AppRoute {
   bloggerRegisterOne,
   bloggerRegisterTwo,
   bloggerRegisterThree,
+  bloggerRegisterFour,
 }
 
 class AppRouter {
@@ -90,5 +92,11 @@ class AppRouter {
             return const BloggerRegisterThree();
           },
         ),
+        GoRoute(path: '/bloggerRegisterFour',
+            name: AppRoute.bloggerRegisterFour.name,
+            builder: (context, state) {
+              return const BloggerRegisterFour();
+            }
+        )
       ]);
 }

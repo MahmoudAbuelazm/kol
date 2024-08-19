@@ -4,13 +4,12 @@ import 'package:kol/features/auth/presentation/widgets/container_with_dropdown.d
 import 'package:kol/features/auth/presentation/widgets/semi_circular_text_field.dart';
 import 'package:kol/features/auth/presentation/widgets/small_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
-import 'package:kol/services/router.dart';
 
-class BloggerRegisterThreeBody extends StatelessWidget {
-  const BloggerRegisterThreeBody({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
+class BloggerRegisterFourBody extends StatelessWidget {
+const BloggerRegisterFourBody({ Key? key }) : super(key: key);
+@override
+Widget build(BuildContext context) {
+return Stack(
       children: [
         Positioned(
           top: 40.h,
@@ -36,74 +35,52 @@ class BloggerRegisterThreeBody extends StatelessWidget {
           padding: const EdgeInsets.all(30.0),
           child: Column(
             children: [
+               const ContainerWithDropdown(text: 'Date of Birth'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Language'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Gender'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Marital Status'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Show Face'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Use Voice'),
+              SizedBox(
+                height: 35.h,
+              ),
+               const ContainerWithDropdown(text: 'Goes in Public Places'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Wear Hijab'),
+              SizedBox(
+                height: 35.h,
+              ),
               const SemiCircularTextField(
-                label: 'Snapchat URL',
+                label: 'Nationality',
                 maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
-              const SemiCircularTextField(
-                label: 'Snap Followers',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              const SemiCircularTextField(
-                label: 'TikTok URL',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              const SemiCircularTextField(
-                label: 'Tiktok Followers',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              const SemiCircularTextField(
-                label: 'Insta Followers',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              const SemiCircularTextField(
-                label: 'Youtube URL',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              const SemiCircularTextField(
-                label: 'YouTube Followers',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              const ContainerWithDropdown(text: 'Career'),
-              SizedBox(
-                height: 35.h,
-              ),
-              const SemiCircularTextField(
-                label: 'Specialization',
-                maxLines: 1,
-              ),
-              SizedBox(
-                height: 35.h,
-              ),
-              SmallButton(text: 'Continue', onTap: () {
-                AppRouter.goRouter
-                    .pushNamed(AppRoute.bloggerRegisterFour.name);
+              SmallButton(text: 'Submit', onTap: () {
+                
               }),
             ],
           ),
         ),
       ],
     );
-  }
+}
 }

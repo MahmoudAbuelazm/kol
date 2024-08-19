@@ -36,36 +36,31 @@ class UserRegisterBody extends StatelessWidget {
           child: Column(
             children: [
               const SemiCircularTextField(
-                hintText: '',
-                label: 'First Name',
+                label: 'First Name', maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Last Name',
+                label: 'Last Name', maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Full Name',
+                label: 'Full Name', maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Email',
+                label: 'Email', maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Password',
+                label: 'Password', maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,

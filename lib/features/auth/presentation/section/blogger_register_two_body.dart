@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kol/features/auth/presentation/widgets/intl_phone_field.dart';
+import 'package:kol/features/auth/presentation/widgets/container_with_dropdown.dart';
 import 'package:kol/features/auth/presentation/widgets/semi_circular_text_field.dart';
 import 'package:kol/features/auth/presentation/widgets/small_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
@@ -37,62 +37,64 @@ class BloggerRegisterTwoBody extends StatelessWidget {
           child: Column(
             children: [
               const SemiCircularTextField(
-                hintText: '',
-                label: 'First Name',
+                label: 'City',
+                maxLines: 1,
+              ),
+              SizedBox(
+                height: 35.h,
+              ),
+              const ContainerWithDropdown(text: 'Country of Residence'),
+              SizedBox(
+                height: 35.h,
+              ),
+              const SemiCircularTextField(
+                label: 'Bio',
+                maxLines: 3,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Last Name',
+                label: 'Full Address',
+                maxLines: 3,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Full Name',
+                label: 'Instagram URL',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Email',
+                label: 'Insta Followers',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Password',
+                label: 'Posts',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                hintText: '',
-                label: 'Password',
+                label: 'Engagement',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
-              const IntlPhoneFields(
-                label: 'Phone Number',
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              const IntlPhoneFields(
-                label: 'Whatsapp',
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              SmallButton(text: 'Continue', onTap: () {
-                 AppRouter.goRouter.pushNamed(AppRoute.bloggerRegisterThree.name); 
-              }),
+              SmallButton(
+                  text: 'Continue',
+                  onTap: () {
+                    AppRouter.goRouter
+                        .pushNamed(AppRoute.bloggerRegisterThree.name);
+                  }),
             ],
           ),
         ),
