@@ -7,6 +7,9 @@ class AppAssets {
   static const String bubble6 = 'assets/images/bubble 06.png';
   static const String foodblogger = 'assets/images/food_blogger.png';
   static const String travelblogger = 'assets/images/travelblogger.png';
+  static const String eg = 'assets/images/eg.png';
+  static const String sa = 'assets/images/sa.png';
+  static const String em = 'assets/images/em.png';
 
   static const String fashionblogger = 'assets/images/fashionblogger.png';
   static const String medicalblogger = 'assets/images/medicalblogger.png';
@@ -16,5 +19,9 @@ class AppAssets {
   static const String instagram = 'assets/images/instagram.png';
   static const String tiktok = 'assets/images/tiktok.png';
   static const String settings = 'assets/images/settings.svg';
+  static const String calender = 'assets/images/calender.svg';
+  static const String homeicon = 'assets/images/homeicon.svg';
+  static const String categories = 'assets/images/categories.svg';
+  static const String profile = 'assets/images/profile.svg';
   static const String logo = 'assets/images/logo.jpg';
 }

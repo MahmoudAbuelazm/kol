@@ -21,7 +21,7 @@ class CategoriesCard extends StatelessWidget {
         elevation: 4,
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 6),
           child: Column(
             children: [
               GridView(
@@ -38,7 +38,9 @@ class CategoriesCard extends StatelessWidget {
                     )
                 ],
               ),
-              8.verticalSpace,
+              SizedBox(
+                height: 8.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -50,16 +52,14 @@ class CategoriesCard extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                     decoration: BoxDecoration(
                         color: ColorPalette.lighpink,
                         borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 6, vertical: 4),
-                      child: Text(
-                        count,
-                        style: TextStyles.raleway700_12,
-                      ),
+                    child: Text(
+                      count,
+                      style: TextStyles.raleway700_12,
                     ),
                   )
                 ],

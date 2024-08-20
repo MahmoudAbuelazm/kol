@@ -24,7 +24,7 @@ class IntlPhoneFields extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.grey),
         ),
       ),
-      flagsButtonPadding: EdgeInsets.all(0),
+      flagsButtonPadding: const EdgeInsets.all(0),
     
       initialCountryCode: 'EG',
       onChanged: (phone) {

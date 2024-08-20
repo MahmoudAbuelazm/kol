@@ -30,8 +30,8 @@ class _ContainerWithDropdownState extends State<ContainerWithDropdown> {
             items:  
               ['item1', 'item2' , 'item3']
                   .map((e) => DropdownMenuItem(
-                        child: Text('$e'),
                         value: e,
+                        child: Text(e),
                       ))
                   .toList(),
                   onChanged: (value) {

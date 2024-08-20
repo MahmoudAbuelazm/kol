@@ -72,7 +72,7 @@ class BloggerRegisterOneBody extends StatelessWidget {
               SizedBox(
                 height: 35.h,
               ),
-              CirclurBorder(),
+              const CirclurBorder(),
               SizedBox(
                 height: 35.h,
               ),

@@ -6,7 +6,7 @@ import 'package:kol/features/auth/presentation/widgets/small_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 
 class BloggerRegisterFourBody extends StatelessWidget {
-const BloggerRegisterFourBody({ Key? key }) : super(key: key);
+const BloggerRegisterFourBody({ super.key });
 @override
 Widget build(BuildContext context) {
 return Stack(

@@ -4,6 +4,7 @@ import 'package:kol/features/auth/presentation/widgets/forward_button.dart';
 import 'package:kol/features/auth/presentation/widgets/small_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
+import 'package:kol/services/Local/app_localizations.dart';
 import 'package:kol/services/router.dart';
 
 class Start extends StatelessWidget {

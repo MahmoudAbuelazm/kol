@@ -1,3 +1,26 @@
 {
-    "Hello World": "مرحبا بالعالم"
+    "Filter": "تصفية",
+    "Egyptian": "مصري",
+    "Emirati": "إماراتي",
+    "Saudi": "سعودي",
+    "male": "ذكر",
+    "female": "أنثى",
+    "Clear": "مسح",
+    "Apply": "تطبيق",
+    "Search": "بحث",
+    "Categories": "الفئات",
+    "See All": "عرض الكل",
+    "All bloggers": "جميع المدونين",
+    "Request campaign": "طلب حملة",
+    "Your campaign brief": "ملخص حملتك",
+    "Cancel": "إلغاء",
+    "Request": "طلب",
+    "followers": "متابعين",
+    "Create Account": "إنشاء حساب",
+    "Name": "الاسم",
+    "Country": "البلد",
+    "Mobile number": "رقم الهاتف",
+    "Send OTP": "إرسال OTP",
+    "Lets get started" : "لنبدأ",
+    "Already have an account" : "هل لديك حساب بالفعل"
 }

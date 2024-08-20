@@ -1,3 +1,5 @@
+import 'package:kol/features/home/manager/models/bloggers_model.dart';
+
 import '../features/home/manager/models/categories_model.dart';
 import '../resources/assets/app_assets.dart';
 
@@ -34,4 +36,45 @@ class Constants {
       image: AppAssets.medicalblogger,
     ),
   ];
+  static List<BloggersModel> bloggers = [
+    const BloggersModel(
+      name: "Name",
+      image: AppAssets.foodblogger,
+      price: "\$17,00",
+    ),
+    const BloggersModel(
+      name: "Name",
+      image: AppAssets.travelblogger,
+      price: "\$17,00",
+    ),
+    const BloggersModel(
+      name: "Name",
+      image: AppAssets.fitnessblogger,
+      price: "\$17,00",
+    ),
+    const BloggersModel(
+      name: "Name",
+      image: AppAssets.fashionblogger,
+      price: "\$17,00",
+    ),
+    const BloggersModel(
+      name: "Name",
+      image: AppAssets.lifestyleblogger,
+      price: "\$17,00",
+    ),
+    const BloggersModel(
+      name: "Name",
+      image: AppAssets.medicalblogger,
+      price: "\$17,00",
+    ),
+  ];
+
+static List<String> ages=[
+   "10's",
+    "20's",
+    "30's",
+    "40's",
+    "50's",
+    "60's",
+];
 }
