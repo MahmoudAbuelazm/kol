@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/features/auth/presentation/widgets/cancel_button.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
-import 'package:kol/features/auth/presentation/widgets/custom_text_field.dart';
+import 'package:kol/features/auth/presentation/widgets/circular_text_field.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
 import 'package:kol/services/router.dart';
@@ -70,23 +70,23 @@ class LoginBody extends StatelessWidget {
                 'Good to see you back!',
                 style: TextStyles().nunitoSans300_15.copyWith(fontSize: 19),
               ),
-            SizedBox(
-              height: 64.h,
-            ),
-              const CustomTextField(
+              SizedBox(
+                height: 64.h,
+              ),
+              const CircularTextField(
                 hintText: 'Mobile number',
               ),
               SizedBox(
-              height: 160.h,
-            ),
+                height: 160.h,
+              ),
               CustomButton(
                   text: 'Send OTP',
                   onTap: () {
                     AppRouter.goRouter.pushNamed(AppRoute.otp.name);
                   }),
-             SizedBox(
-              height: 14.h,
-            ),
+              SizedBox(
+                height: 14.h,
+              ),
               const Align(
                 alignment: Alignment.center,
                 child: CancelButton(),
