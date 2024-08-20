@@ -219,7 +219,9 @@ class _EntryDataContainerState extends State<EntryDataContainer> {
                       backgroundColor:
                           WidgetStateProperty.all(ColorPalette.primary),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      AppRouter.goRouter.pushNamed(AppRoute.payment.name);
+                    },
                     child: Text("Request".tr(context),
                         style: TextStyles.montserrat400_13.copyWith(
                             fontSize: 16.sp, color: ColorPalette.white))),

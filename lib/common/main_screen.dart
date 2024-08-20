@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kol/common/navigation_bar.dart';
 import 'package:kol/features/favourites/presentation/screens/favourite_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -11,16 +11,14 @@ import '../resources/colors/color_palette.dart';
 
 class MainScreen extends StatefulWidget {
   final int intialSection;
-  const MainScreen({super.key, this.intialSection = 0});
+  const MainScreen({super.key, this.intialSection = 1});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int currentSection = 0;
   late PersistentTabController _controller;
-  late bool _hideNavBar;
   final List<ScrollController> _scrollControllers = [
     ScrollController(),
     ScrollController(),
@@ -29,8 +27,7 @@ class _MainScreenState extends State<MainScreen> {
   final NavBarStyle _navBarStyle = NavBarStyle.style13;
   @override
   void initState() {
-    _controller = PersistentTabController(initialIndex: 1);
-    _hideNavBar = false;
+    _controller = PersistentTabController(initialIndex: widget.intialSection);
     super.initState();
   }
 
@@ -48,7 +45,9 @@ class _MainScreenState extends State<MainScreen> {
       child: Scaffold(
         body: PersistentTabView(
           context,
-          isVisible: !_hideNavBar,
+          resizeToAvoidBottomInset: true,
+          navBarHeight: 70.h,
+          
           controller: _controller,
           screens: const [
             HomeScreen(),

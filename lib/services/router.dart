@@ -5,6 +5,7 @@ import 'package:kol/features/auth/presentation/screens/otp.dart';
 import 'package:kol/features/auth/presentation/screens/start.dart';
 import 'package:kol/features/filter/presentation/screen/filter_screen.dart';
 import 'package:kol/features/home/presentation/screen/home_screen.dart';
+import 'package:kol/features/payment/presentation/screen/payment_screen.dart';
 import 'package:kol/features/request/presentation/screen/request_screen.dart';
 
 import '../common/main_screen.dart';
@@ -17,7 +18,8 @@ enum AppRoute {
   otp,
   request,
   filTer,
-  mainscreen
+  mainscreen,
+  payment,
 }
 
 class AppRouter {
@@ -84,6 +86,13 @@ class AppRouter {
           name: AppRoute.mainscreen.name,
           builder: (context, state) {
             return const MainScreen();
+          },
+        ),
+        GoRoute(
+          path: '/paYMent',
+          name: AppRoute.payment.name,
+          builder: (context, state) {
+            return const PaymentScreen();
           },
         ),
       ]);

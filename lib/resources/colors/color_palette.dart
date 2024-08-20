@@ -17,6 +17,8 @@ class ColorPalette {
   static const Color darkpink = Color(0xffF81140);
   static const Color  lightred = Color(0xffFDF3F3);
   static const Color  lightunselected = Color(0xffF9F9F9);
+  static const Color  addCard = Color(0xffF6F6F6);
+  static const Color  textField = Color(0xffF1F4FE);
 
   static const Color  red = Color(0xffF1AEAE);
 }
