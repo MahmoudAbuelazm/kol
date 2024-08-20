@@ -16,7 +16,7 @@ class PaymentScreen extends StatelessWidget {
           style: TextStyles.montserrat700_50.copyWith(fontSize: 16.sp),
         ),
       ),
-      body: PaymentBody(),
+      body: const PaymentBody(),
     );
   }
 }

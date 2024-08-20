@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/features/auth/presentation/widgets/cancel_button.dart';
 import 'package:kol/features/auth/presentation/widgets/custom_button.dart';
-import 'package:kol/features/auth/presentation/widgets/custom_text_field.dart';
+import 'package:kol/features/auth/presentation/widgets/circular_text_field.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 import 'package:kol/resources/styles/text_styles.dart';
 import 'package:kol/services/Local/app_localizations.dart';
@@ -50,19 +50,19 @@ class CreateEmailBody extends StatelessWidget {
               SizedBox(
                 height: 60.h,
               ),
-              const CustomTextField(
+              const CircularTextField(
                 hintText: "Name",
               ),
               SizedBox(
                 height: 15.h,
               ),
-              const CustomTextField(
+              const CircularTextField(
                 hintText: "Country",
               ),
               SizedBox(
                 height: 15.h,
               ),
-              const CustomTextField(
+              const CircularTextField(
                 hintText: "Mobile number",
               ),
               SizedBox(

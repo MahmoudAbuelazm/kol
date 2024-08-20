@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kol/resources/styles/text_styles.dart';
 import 'package:kol/services/Local/app_localizations.dart';
 
-class CustomTextField extends StatelessWidget {
+class CircularTextField extends StatelessWidget {
   final String hintText;
-  const CustomTextField({super.key, required this.hintText});
+  const CircularTextField({super.key, required this.hintText});
   @override
   Widget build(BuildContext context) {
     return TextField(
