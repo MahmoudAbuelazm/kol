@@ -60,7 +60,7 @@ class LoginBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 238.h,
+                height: 200.h,
               ),
               Text(
                 'Login',
@@ -77,7 +77,7 @@ class LoginBody extends StatelessWidget {
                 hintText: 'Mobile number',
               ),
               SizedBox(
-                height: 160.h,
+                height: 150.h,
               ),
               CustomButton(
                   text: 'Send OTP',

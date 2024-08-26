@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../resources/colors/color_palette.dart';
 import '../../../../resources/styles/text_styles.dart';
 
@@ -20,11 +19,15 @@ class CategoriesCard extends StatelessWidget {
     return Card(
         elevation: 4,
         color: Colors.white,
+        margin: EdgeInsets.zero,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 6),
+          padding: EdgeInsets.symmetric(horizontal: 8.w),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+            
               GridView(
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisSpacing: 5, mainAxisSpacing: 5, crossAxisCount: 2),
@@ -39,24 +42,27 @@ class CategoriesCard extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 8.h,
+                height: 10.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    text,
-                    style: TextStyles.montserrat700_50.copyWith(
-                      fontSize: 13.sp,
-                      height: 1.7,
+                  Flexible(
+                    flex: 1,
+                    child: Text(
+                      text,
+                      style: TextStyles.montserrat700_50
+                          .copyWith(color: ColorPalette.black, fontSize: 12.sp),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                     ),
                   ),
                   Container(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        EdgeInsets.symmetric(horizontal: 10.w, vertical: 3.h),
                     decoration: BoxDecoration(
                         color: ColorPalette.lighpink,
-                        borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(7.r)),
                     child: Text(
                       count,
                       style: TextStyles.raleway700_12,

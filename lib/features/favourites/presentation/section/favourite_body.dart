@@ -12,7 +12,7 @@ class FavouriteBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 10.w),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,30 +26,32 @@ class FavouriteBody extends StatelessWidget {
               height: 8.h,
             ),
             GridView(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisSpacing: 15.w,
-                    mainAxisSpacing: 15.h,
-                    childAspectRatio: .7,
-                    crossAxisCount: 2),
-                children: [
-                  ...List.generate(
-                    Constants.bloggers.length,
-                    (index) => CustomBloggerCard(
-                      onTap: () {
-                        AppRouter.goRouter.pushNamed(AppRoute.request.name,
-                            extra: {
-                              'bloggersModel': Constants.bloggers[index]
-                            });
-                      },
-                      name: Constants.bloggers[index].name,
-                      price: Constants.bloggers[index].price,
-                      image: Constants.bloggers[index].image,
-                      isFavourite: true,
-                    ),
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisSpacing: 10.w,
+                  mainAxisSpacing: 10.h,
+                  childAspectRatio: .7,
+                  crossAxisCount: 2),
+              children: [
+                ...List.generate(
+                  Constants.bloggers.length,
+                  (index) => CustomBloggerCard(
+                    onTap: () {
+                      AppRouter.goRouter.pushNamed(AppRoute.request.name,
+                          extra: {'bloggersModel': Constants.bloggers[index]});
+                    },
+                    name: Constants.bloggers[index].name,
+                    price: Constants.bloggers[index].price,
+                    image: Constants.bloggers[index].image,
+                    isFavourite: true,
                   ),
-                ]),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 25.h,
+            )
           ],
         ),
       ),

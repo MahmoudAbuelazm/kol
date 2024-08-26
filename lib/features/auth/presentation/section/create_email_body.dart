@@ -40,7 +40,7 @@ class CreateEmailBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                height: 100.h,
+                height: 90.h,
               ),
               Text(
                 "Create Account".tr(context),
@@ -66,7 +66,7 @@ class CreateEmailBody extends StatelessWidget {
                 hintText: "Mobile number",
               ),
               SizedBox(
-                height: 120.h,
+                height: 110.h,
               ),
               CustomButton(
                   text: "Send OTP",

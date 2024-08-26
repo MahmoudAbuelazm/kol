@@ -11,7 +11,7 @@ class CategoriesBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 15.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -24,23 +24,27 @@ class CategoriesBody extends StatelessWidget {
             height: 8.h,
           ),
           GridView(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisSpacing: 15.w,
-                  mainAxisSpacing: 15.h,
-                  childAspectRatio: .8,
-                  crossAxisCount: 2),
-              children: [
-                ...List.generate(
-                  Constants.categories.length,
-                  (index) => CategoriesCard(
-                    text: Constants.categories[index].name,
-                    count: Constants.categories[index].count,
-                    image: Constants.categories[index].image,
-                  ),
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisSpacing: 10.w,
+                mainAxisSpacing: 10.h,
+                childAspectRatio: .8,
+                crossAxisCount: 2),
+            children: [
+              ...List.generate(
+                Constants.categories.length,
+                (index) => CategoriesCard(
+                  text: Constants.categories[index].name,
+                  count: Constants.categories[index].count,
+                  image: Constants.categories[index].image,
                 ),
-              ]),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 25.h,
+          )
         ],
       ),
     );
