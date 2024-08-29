@@ -23,24 +23,31 @@ class CategoriesBody extends StatelessWidget {
           SizedBox(
             height: 8.h,
           ),
-          GridView(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisSpacing: 15.w,
-                  mainAxisSpacing: 15.h,
-                  childAspectRatio: .8,
-                  crossAxisCount: 2),
-              children: [
-                ...List.generate(
-                  Constants.categories.length,
-                  (index) => CategoriesCard(
-                    text: Constants.categories[index].name,
-                    count: Constants.categories[index].count,
-                    image: Constants.categories[index].image,
+          Expanded(
+            child: GridView(
+                shrinkWrap: true,
+                physics: const BouncingScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisSpacing: 15.w,
+                    mainAxisSpacing: 15.h,
+                    childAspectRatio: .8,
+                    crossAxisCount: 2),
+                children: [
+                  ...List.generate(
+                    Constants.categories.length * 2,
+                    (index) => CategoriesCard(
+                      text: Constants
+                          .categories[index % Constants.categories.length].name,
+                      count: Constants
+                          .categories[index % Constants.categories.length]
+                          .count,
+                      image: Constants
+                          .categories[index % Constants.categories.length]
+                          .image,
+                    ),
                   ),
-                ),
-              ]),
+                ]),
+          ),
         ],
       ),
     );

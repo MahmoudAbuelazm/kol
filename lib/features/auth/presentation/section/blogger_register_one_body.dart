@@ -35,8 +35,13 @@ class BloggerRegisterOneBody extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Column(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+               IconButton(
+                  onPressed: () {
+                    AppRouter.goRouter.pop();
+                  },
+                  icon: Icon(Icons.arrow_back_ios)),
               const SemiCircularTextField(
                 label: 'First Name',
                 maxLines: 1,
