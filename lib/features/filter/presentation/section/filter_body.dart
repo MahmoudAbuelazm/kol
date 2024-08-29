@@ -46,14 +46,17 @@ class FilterBody extends StatelessWidget {
               CountryCard(
                 img: AppAssets.eg,
                 country: "Egyptian",
+                canSelect: true,
               ),
               CountryCard(
                 img: AppAssets.em,
                 country: "Emirati",
+                canSelect: true,
               ),
               CountryCard(
                 img: AppAssets.sa,
                 country: "Saudi",
+                canSelect: true,
               ),
             ],
           ),

@@ -19,6 +19,7 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
         backgroundColor: ColorPalette.primary,
+        
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.r),
         ),
@@ -28,7 +29,7 @@ class CustomButton extends StatelessWidget {
       child: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 17.h, horizontal: 20.w),
-          child: Text(text.tr(context),
+          child: Text(text,
               style: TextStyles.montserrat400_13.copyWith(color: Colors.white)),
         ),
       ),
