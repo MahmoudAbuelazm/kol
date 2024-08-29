@@ -65,10 +65,25 @@ class _MainScreenState extends State<MainScreen> {
                 colorFilter: const ColorFilter.mode(
                     ColorPalette.primary, BlendMode.srcIn),
               ),
-              icon: SvgPicture.asset(
-                AppAssets.homeicon,
-                colorFilter:
-                    const ColorFilter.mode(ColorPalette.black, BlendMode.srcIn),
+              icon: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 12.h,
+                ),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: ColorPalette.black, // Example color
+                        width: 3.0, // Example width
+                      ),
+                    ),
+                  ),
+                  child: SvgPicture.asset(
+                    AppAssets.homeicon,
+                    colorFilter: const ColorFilter.mode(
+                        ColorPalette.black, BlendMode.srcIn),
+                  ),
+                ),
               ),
             ),
             PersistentBottomNavBarItem(
@@ -77,7 +92,21 @@ class _MainScreenState extends State<MainScreen> {
               inactiveIcon: const Icon(
                 Icons.favorite_outline,
               ),
-              icon: const Icon(Icons.favorite_outline),
+              icon: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 12.h,
+                ),
+                child: Container(
+                    decoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          color: ColorPalette.black, // Example color
+                          width: 3.0, // Example width
+                        ),
+                      ),
+                    ),
+                    child: const Icon(Icons.favorite_outline)),
+              ),
             ),
             PersistentBottomNavBarItem(
               activeColorPrimary: ColorPalette.black,
@@ -87,10 +116,25 @@ class _MainScreenState extends State<MainScreen> {
                 colorFilter: const ColorFilter.mode(
                     ColorPalette.primary, BlendMode.srcIn),
               ),
-              icon: SvgPicture.asset(
-                AppAssets.categories,
-                colorFilter:
-                    const ColorFilter.mode(ColorPalette.black, BlendMode.srcIn),
+              icon: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 12.h,
+                ),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: ColorPalette.black, // Example color
+                        width: 3.0, // Example width
+                      ),
+                    ),
+                  ),
+                  child: SvgPicture.asset(
+                    AppAssets.categories,
+                    colorFilter: const ColorFilter.mode(
+                        ColorPalette.black, BlendMode.srcIn),
+                  ),
+                ),
               ),
             ),
             PersistentBottomNavBarItem(
@@ -101,10 +145,25 @@ class _MainScreenState extends State<MainScreen> {
                 colorFilter: const ColorFilter.mode(
                     ColorPalette.primary, BlendMode.srcIn),
               ),
-              icon: SvgPicture.asset(
-                AppAssets.profile,
-                colorFilter:
-                    const ColorFilter.mode(ColorPalette.black, BlendMode.srcIn),
+              icon: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 12.h,
+                ),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: ColorPalette.black, // Example color
+                        width: 3.0, // Example width
+                      ),
+                    ),
+                  ),
+                  child: SvgPicture.asset(
+                    AppAssets.profile,
+                    colorFilter: const ColorFilter.mode(
+                        ColorPalette.black, BlendMode.srcIn),
+                  ),
+                ),
               ),
             ),
           ],
