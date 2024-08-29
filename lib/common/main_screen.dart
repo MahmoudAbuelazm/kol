@@ -6,12 +6,13 @@ import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../features/categories/presentation/screen/categories_screen.dart';
 import '../features/home/presentation/screen/home_screen.dart';
+import '../features/user_profile/presentation/screen/user_profile.dart';
 import '../resources/assets/app_assets.dart';
 import '../resources/colors/color_palette.dart';
 
 class MainScreen extends StatefulWidget {
   final int intialSection;
-  const MainScreen({super.key, this.intialSection = 1});
+  const MainScreen({super.key, this.intialSection = 0});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -47,13 +48,12 @@ class _MainScreenState extends State<MainScreen> {
           context,
           resizeToAvoidBottomInset: true,
           navBarHeight: 70.h,
-          
           controller: _controller,
           screens: const [
             HomeScreen(),
             FavouriteScreen(),
             CategoriesScreen(),
-            HomeScreen(),
+            UserProfile(),
           ],
           navBarStyle: _navBarStyle,
           items: [

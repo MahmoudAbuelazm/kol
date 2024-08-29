@@ -24,4 +24,5 @@ class AppAssets {
   static const String categories = 'assets/images/categories.svg';
   static const String profile = 'assets/images/profile.svg';
   static const String logo = 'assets/images/logo.jpg';
+  static const String userprofile = 'assets/images/userprofile.png';
 }

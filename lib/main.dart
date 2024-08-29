@@ -28,17 +28,16 @@ class MyApp extends StatelessWidget {
               builder: (_, child) {
                 return SafeArea(
                   child: MaterialApp.router(
+                      theme: ThemeData().copyWith(
+                        scaffoldBackgroundColor: Colors.white,
+                      ),
                       localizationsDelegates: const [
-                        AppLocalizations
-                            .delegate, 
+                        AppLocalizations.delegate,
                         GlobalMaterialLocalizations.delegate,
                         GlobalWidgetsLocalizations.delegate,
                         GlobalCupertinoLocalizations.delegate
                       ],
-                      supportedLocales: const [
-                        Locale('en'),
-                        Locale('ar')
-                      ],
+                      supportedLocales: const [Locale('en'), Locale('ar')],
                       debugShowCheckedModeBanner: false,
                       locale: state is ChangeLocaleState
                           ? state.local

@@ -19,7 +19,7 @@ class OtpColumn extends StatelessWidget {
       SizedBox(
         height: 8.h,
       ),
-      Text('00:60', style: TextStyles().montserrat700_16),
+      Text('00:60', style: TextStyles.montserrat700_16),
     ]);
   }
 }

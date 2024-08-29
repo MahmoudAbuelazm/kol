@@ -68,7 +68,10 @@ class HomeBody extends StatelessWidget {
                     ),
                     8.horizontalSpace,
                     ForwardButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        AppRouter.goRouter.pushNamed(AppRoute.mainscreen.name,
+                            extra: {'intialSection': 2});
+                      },
                     ),
                   ],
                 )
