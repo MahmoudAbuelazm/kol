@@ -87,26 +87,26 @@ class AppRouter {
             return const BloggerRegisterOne();
           },
         ),
-         GoRoute(
+        GoRoute(
           path: '/bloggerRegisterTwo',
           name: AppRoute.bloggerRegisterTwo.name,
           builder: (context, state) {
             return const BloggerRegisterTwo();
           },
         ),
-         GoRoute(
+        GoRoute(
           path: '/bloggerRegisterThree',
           name: AppRoute.bloggerRegisterThree.name,
           builder: (context, state) {
             return const BloggerRegisterThree();
           },
         ),
-        GoRoute(path: '/bloggerRegisterFour',
+        GoRoute(
+            path: '/bloggerRegisterFour',
             name: AppRoute.bloggerRegisterFour.name,
             builder: (context, state) {
               return const BloggerRegisterFour();
-            }
-        ),
+            }),
         GoRoute(
           path: '/request',
           name: AppRoute.request.name,
@@ -129,7 +129,11 @@ class AppRouter {
           path: '/maiN',
           name: AppRoute.mainscreen.name,
           builder: (context, state) {
-            return const MainScreen();
+            final Map<String, dynamic> map =
+                state.extra as Map<String, dynamic>;
+            return MainScreen(
+              intialSection: map['intialSection'],
+            );
           },
         ),
         GoRoute(

@@ -41,10 +41,20 @@ class _SelectedAgeState extends State<SelectedAge> {
                     vertical: 5,
                   ),
                   decoration: BoxDecoration(
+                    shape: selectedindex == index
+                        ? BoxShape.circle
+                        : BoxShape.rectangle,
                     color: selectedindex == index
-                        ? ColorPalette.red
+                        ? ColorPalette.white
                         : Colors.transparent,
-                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: selectedindex == index
+                          ? ColorPalette.darkpink
+                          : Colors.transparent,
+                    ),
+                    borderRadius: selectedindex != index
+                        ? BorderRadius.circular(10)
+                        : null,
                   ),
                   child: Text(
                     "${index * 10}'s",
@@ -52,7 +62,7 @@ class _SelectedAgeState extends State<SelectedAge> {
                       fontSize: 13.sp,
                       fontWeight: FontWeight.w800,
                       color: selectedindex == index
-                          ? ColorPalette.white
+                          ? ColorPalette.darkpink
                           : ColorPalette.red,
                     ),
                   ),

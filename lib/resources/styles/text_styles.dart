@@ -33,7 +33,7 @@ class TextStyles {
         color: ColorPalette.deepGrey,
       );
        
-  TextStyle get montserrat700_16 =>  GoogleFonts.montserrat(
+ static TextStyle get montserrat700_16 =>  GoogleFonts.montserrat(
         fontWeight: FontWeight.w700,
         fontSize: 16.sp,
         color: ColorPalette.primary,

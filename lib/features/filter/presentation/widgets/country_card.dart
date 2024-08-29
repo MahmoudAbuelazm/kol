@@ -8,10 +8,12 @@ import '../../../../resources/styles/text_styles.dart';
 class CountryCard extends StatefulWidget {
   final String img;
   final String country;
+  final bool canSelect;
   const CountryCard({
     super.key,
     required this.img,
     required this.country,
+    this.canSelect = false,
   });
 
   @override
@@ -27,9 +29,11 @@ class _CountryCardState extends State<CountryCard> {
       children: [
         GestureDetector(
           onTap: () {
-            setState(() {
-              isSelected = !isSelected;
-            });
+            widget.canSelect
+                ? setState(() {
+                    isSelected = !isSelected;
+                  })
+                : null;
           },
           child: Card(
             shape: const CircleBorder(),
