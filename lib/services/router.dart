@@ -131,9 +131,7 @@ class AppRouter {
           builder: (context, state) {
             final Map<String, dynamic> map =
                 state.extra as Map<String, dynamic>;
-            if (state.extra == null) {
-              return const MainScreen();
-            }
+           
             return MainScreen(
               intialSection: map['intialSection'],
             );
