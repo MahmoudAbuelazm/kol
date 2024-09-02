@@ -29,6 +29,7 @@ class CustomBloggerCard extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Card(
+          margin: EdgeInsets.zero,
           elevation: 4,
           color: Colors.white,
           child: Padding(

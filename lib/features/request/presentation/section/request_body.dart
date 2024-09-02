@@ -30,7 +30,7 @@ class RequestBody extends StatelessWidget {
               children: [
                 Container(
                   color: ColorPalette.lightContainer.withOpacity(.76),
-                  height: 141.h,
+                  height: 165.h,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Column(
@@ -88,12 +88,14 @@ class RequestBody extends StatelessWidget {
                               AppAssets.facebook,
                               width: 30.w,
                             ),
+                            6.horizontalSpace,
                             Text(
                               "2.5 M${"followers".tr(context)}",
                               style: TextStyles.montserrat400_13,
-                            )
+                            ),
                           ],
                         ),
+                        //20.verticalSpace,
                       ],
                     ),
                   ),

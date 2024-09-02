@@ -18,7 +18,7 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 20.h),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,8 +82,8 @@ class HomeBody extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisSpacing: 15.w,
-                    mainAxisSpacing: 15.h,
+                    crossAxisSpacing: 10.w,
+                    mainAxisSpacing: 10.h,
                     childAspectRatio: .8,
                     crossAxisCount: 2),
                 children: [
@@ -106,8 +106,8 @@ class HomeBody extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisSpacing: 15.w,
-                    mainAxisSpacing: 15.h,
+                    crossAxisSpacing: 10.w,
+                    mainAxisSpacing: 10.h,
                     childAspectRatio: .7,
                     crossAxisCount: 2),
                 children: [

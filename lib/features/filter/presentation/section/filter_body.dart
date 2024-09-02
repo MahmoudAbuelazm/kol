@@ -18,7 +18,7 @@ class FilterBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: Column(
         children: [
           Row(
@@ -99,7 +99,7 @@ class FilterBody extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 195.h,
+            height: 130.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -8,8 +8,7 @@ class FilterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:  FilterBody(
-        
-      ),
-    );}
+      body: FilterBody(),
+    );
+  }
 }
