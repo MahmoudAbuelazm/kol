@@ -58,7 +58,14 @@ class OtpBody extends StatelessWidget {
                 ),
                 ForwardButton(
                   onPressed: () {
-                    AppRouter.goRouter.pushNamed(AppRoute.mainscreen.name);
+                    AppRouter.goRouter.pushNamed(AppRoute.mainscreen.name,
+                        extra: {'intialSection': 0});
+                  },
+                ),
+                SizedBox(width: 10.w),
+                ForwardButton(
+                  onPressed: () {
+                    AppRouter.goRouter.pushNamed(AppRoute.bloggerProfile.name);
                   },
                 ),
               ],

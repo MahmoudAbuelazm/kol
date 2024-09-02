@@ -35,7 +35,13 @@ class BloggerRegisterTwoBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                  onPressed: () {
+                    AppRouter.goRouter.pop();
+                  },
+                  icon: Icon(Icons.arrow_back_ios)),
               const SemiCircularTextField(
                 label: 'City',
                 maxLines: 1,

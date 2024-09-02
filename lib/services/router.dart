@@ -8,12 +8,15 @@ import 'package:kol/features/auth/presentation/screens/login.dart';
 import 'package:kol/features/auth/presentation/screens/otp.dart';
 import 'package:kol/features/auth/presentation/screens/start.dart';
 import 'package:kol/features/auth/presentation/screens/user_register.dart';
+import 'package:kol/features/blogger_request/screen/blogger_request_screen.dart';
 import 'package:kol/features/filter/presentation/screen/filter_screen.dart';
 import 'package:kol/features/home/presentation/screen/home_screen.dart';
 import 'package:kol/features/payment/presentation/screen/payment_screen.dart';
 import 'package:kol/features/request/presentation/screen/request_screen.dart';
 
 import '../common/main_screen.dart';
+import '../features/blogger_profile/presentation/screen/blogger_profile.dart';
+import '../features/wallet/presentation/screen/wallet_screen.dart';
 
 enum AppRoute {
   home,
@@ -30,6 +33,9 @@ enum AppRoute {
   filTer,
   mainscreen,
   payment,
+  wallet,
+  bloggerProfile,
+  bloggerRequest,
 }
 
 class AppRouter {
@@ -131,9 +137,7 @@ class AppRouter {
           builder: (context, state) {
             final Map<String, dynamic> map =
                 state.extra as Map<String, dynamic>;
-            if (state.extra == null) {
-              return const MainScreen();
-            }
+
             return MainScreen(
               intialSection: map['intialSection'],
             );
@@ -146,5 +150,17 @@ class AppRouter {
             return const PaymentScreen();
           },
         ),
+        GoRoute(
+            path: '/waLLet',
+            name: AppRoute.wallet.name,
+            builder: (context, state) {
+              return const WalletScreen();
+            }),
+        GoRoute(path: '/bloggERProfile', name: AppRoute.bloggerProfile.name,builder: (context, state) {
+          return const BloggerProfile();
+        }),
+        GoRoute(path: '/bloggERRequest', name: AppRoute.bloggerRequest.name,builder: (context, state) {
+          return const BloggerRequestScreen();
+        }),
       ]);
 }

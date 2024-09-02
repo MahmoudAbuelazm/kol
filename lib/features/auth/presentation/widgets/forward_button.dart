@@ -4,14 +4,16 @@ import 'package:kol/resources/colors/color_palette.dart';
 
 class ForwardButton extends StatelessWidget {
   final VoidCallback onPressed;
-  const ForwardButton({super.key, required this.onPressed});
+  final Color color;
+  const ForwardButton(
+      {super.key, required this.onPressed, this.color = ColorPalette.pink});
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 30.w,
       height: 30.h,
-      decoration: const BoxDecoration(
-        color: ColorPalette.pink,
+      decoration: BoxDecoration(
+        color: color,
         shape: BoxShape.circle,
       ),
       child: Center(

@@ -5,6 +5,8 @@ import 'package:kol/features/auth/presentation/widgets/semi_circular_text_field.
 import 'package:kol/features/auth/presentation/widgets/small_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 
+import '../../../../services/router.dart';
+
 class UserRegisterBody extends StatelessWidget {
   const UserRegisterBody({super.key});
   @override
@@ -34,33 +36,44 @@ class UserRegisterBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                  onPressed: () {
+                    AppRouter.goRouter.pop();
+                  },
+                  icon: Icon(Icons.arrow_back_ios)),
               const SemiCircularTextField(
-                label: 'First Name', maxLines: 1,
+                label: 'First Name',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                label: 'Last Name', maxLines: 1,
+                label: 'Last Name',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                label: 'Full Name', maxLines: 1,
+                label: 'Full Name',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                label: 'Email', maxLines: 1,
+                label: 'Email',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
               ),
               const SemiCircularTextField(
-                label: 'Password', maxLines: 1,
+                label: 'Password',
+                maxLines: 1,
               ),
               SizedBox(
                 height: 35.h,
@@ -77,7 +90,12 @@ class UserRegisterBody extends StatelessWidget {
               SizedBox(
                 height: 15.h,
               ),
-              SmallButton(text: 'Submit', onTap: () {}),
+              SmallButton(
+                  text: 'Submit',
+                  onTap: () {
+                    AppRouter.goRouter.pushNamed(AppRoute.mainscreen.name,
+                        extra: {'intialSection': 0});
+                  }),
             ],
           ),
         ),

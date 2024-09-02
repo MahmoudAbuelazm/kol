@@ -5,11 +5,13 @@ import 'package:kol/features/auth/presentation/widgets/semi_circular_text_field.
 import 'package:kol/features/auth/presentation/widgets/small_button.dart';
 import 'package:kol/resources/assets/app_assets.dart';
 
+import '../../../../services/router.dart';
+
 class BloggerRegisterFourBody extends StatelessWidget {
-const BloggerRegisterFourBody({ super.key });
-@override
-Widget build(BuildContext context) {
-return Stack(
+  const BloggerRegisterFourBody({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
       children: [
         Positioned(
           top: 40.h,
@@ -34,8 +36,14 @@ return Stack(
         Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               const ContainerWithDropdown(text: 'Date of Birth'),
+              IconButton(
+                  onPressed: () {
+                    AppRouter.goRouter.pop();
+                  },
+                  icon: Icon(Icons.arrow_back_ios)),
+              const ContainerWithDropdown(text: 'Date of Birth'),
               SizedBox(
                 height: 35.h,
               ),
@@ -59,7 +67,7 @@ return Stack(
               SizedBox(
                 height: 35.h,
               ),
-               const ContainerWithDropdown(text: 'Goes in Public Places'),
+              const ContainerWithDropdown(text: 'Goes in Public Places'),
               SizedBox(
                 height: 35.h,
               ),
@@ -74,13 +82,15 @@ return Stack(
               SizedBox(
                 height: 35.h,
               ),
-              SmallButton(text: 'Submit', onTap: () {
-                
-              }),
+              SmallButton(
+                  text: 'Submit',
+                  onTap: () {
+                    AppRouter.goRouter.pushNamed(AppRoute.bloggerProfile.name);
+                  }),
             ],
           ),
         ),
       ],
     );
-}
+  }
 }
